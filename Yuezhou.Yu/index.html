@@ -3,9 +3,29 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Cat Tracker</title>
+
+	<base href="/aau/wnm617_202230_01/Yuezhou.Yu/">
+
+	<link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
+
+	<script src="lib/js/jquery-2.2.4.min.js"></script>
+	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
 	
+	<section data-role="page" id="signin-page">
+		<div data-role="main">
+			<div class="form control">
+				<input type="text" id="signin-name" data-role="none" class="form-input">
+			</div>
+			<div class="form control">	
+				<input type="password" id="signin-password" data-role="none" class="form-input">
+			</div>
+			<!--<input type="submit" data-role="none">-->
+			<div class="form control"><a href="#recent-page" class="form-button">Submit</a>
+			</div>
+		</div>
+	</section>
 </body>
 </html>

@@ -1,0 +1,30 @@
+
+/* CSS RESET */
+
+*, *::after, *::before {
+   box-sizing:border-box;
+}
+
+:root {
+   --font-sans:'PT Sans', sans-serif;
+   --font-serif:Cambria, Georgia, serif;
+   
+   --color-neutral-light:#79554878;
+   --color-neutral-medium:#2f1106d4;
+   --color-neutral-dark:#4c1907d1;
+
+   --color-main-light:#e5f1f2;
+   --color-main-medium:#4ba0a8;
+   --color-main-dark:#0a4349;
+
+   --color-white:#fff;
+   --color-black:#111;
+
+   --header-height:3rem;
+}
+
+body {
+   margin:0;
+   font-size:100%;
+   font-family:var(--font-sans);
+}
