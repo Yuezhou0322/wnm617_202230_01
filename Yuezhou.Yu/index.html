@@ -12,13 +12,18 @@
 
 	<script src="lib/js/jquery-2.2.4.min.js"></script>
 	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/signin.js"></script>
 	<script src="js/app.js"></script>
 </head>
 <body>
 	
 	<section data-role="page" id="signin-page">
-      <div data-role="main">
-         <form id="signin-form" class="form">
+      <div data-role="main" class="display-flex flex-column">
+         <div class="flex-stretch"></div>
+         <div style="text-align:center;margin-bottom:10vmin">
+            <img src="img/icons/logo.png" alt="" style="width:50vmin;height:50vmin">
+         </div>
+         <form id="signin-form" class="form" data-ajax="false">
             <div class="form-control">
                <label for="signin-username" class="form-label">Username</label>
                <input type="text" id="signin-username" data-role="none" class="form-input" placeholder="Type your Username">
@@ -29,16 +34,51 @@
             </div>
             <!-- <input type="submit" data-role="none"> -->
             <div class="form-control">
-               <a href="#recent-page" class="form-button">Submit</a>
+               <button type="submit" class="form-button" data-role="none">Submit</button>
+            </div>
+            <div class="form-control" style="text-align:center;font-size:0.8em;">
+               <p>New to the app? <a href="#signup-page">Sign Up!</a></p>
             </div>
          </form>
       </div>
    </section>
 
 
+   <section data-role="page" id="signup-page">
+      <div data-role="main" class="display-flex flex-column">
+         <div class="flex-stretch"></div>
+         <form id="signup-form" class="form" data-ajax="false">
+            <div class="form-control">
+               <label for="signup-username" class="form-label">Username</label>
+               <input type="text" id="signup-username" data-role="none" class="form-input" placeholder="Type your Username">
+            </div>
+            <div class="form-control">
+               <label for="signup-password" class="form-label">Password</label>
+               <input type="password" id="signup-password" data-role="none" class="form-input" placeholder="Type your Password">
+            </div>
+            <div class="form-control">
+               <label for="signup-password2" class="form-label">Confirm Password</label>
+               <input type="password" id="signup-password2" data-role="none" class="form-input" placeholder="Type your Password again">
+            </div>
+            <!-- <input type="submit" data-role="none"> -->
+            <div class="form-control">
+               <!-- <button type="button" class="form-button">Submit</button> -->
+               <a href="#recent-page" class="form-button">Sign Up</a>
+            </div>
+            <div class="form-control" style="text-align:center;font-size:0.8em;">
+               <p>Already have an account? <a href="#signin-page">Sign In!</a></p>
+            </div>
+         </form>
+         <div class="flex-stretch"></div>
+      </div>
+   </section>
+
+
    <section data-role="page" id="recent-page">
-      <div data-role="main">
-         map
+      <div data-role="main" class="map-placeholder">
+         <div class="marker" style="position:absolute;top:30vh;left:20vw" data-activate="#map-drawer">
+            <img src="img/icons/marker.svg" alt="" class="icon">
+         </div>
       </div>
       <footer data-role="footer">
          <ul>
@@ -47,30 +87,47 @@
             <li><a href="#user-profile-page">Profile</a></li>
          </ul>
       </footer>
+
+      <div class="modal" id="map-drawer">
+         <div class="modal-back transparent passthrough" data-deactivate="#map-drawer"></div>
+         <div class="modal-drawer left">
+            <div class="modal-head display-flex">
+               <div class="flex-none">sidebar</div>
+               <div class="flex-stretch"></div>
+               <div class="flex-none">
+                  <a href="#" data-deactivate="#map-drawer">&times;</a>
+               </div>
+               
+            </div>
+            <div class="modal-body">
+               content!
+            </div>
+         </div>
+      </div>
    </section>
 
 
    <section data-role="page" id="list-page">
       <header data-role="header">
-         <h1>Animal List</h1>
+         <h1>Cat List</h1>
          <ul>
             <li class="flex-stretch"></li>
-            <li><a href="#">Add</a></li>
+            <li><a href="#" data-activate="#list-add-animal-modal">Add</a></li>
          </ul>
       </header>
       <div data-role="main">
          <!-- ul>li*10>a[href=#animal-profile-page]>{Animal $} -->
          <ul>
-            <li><a href="#animal-profile-page">Animal 1</a></li>
-            <li><a href="#animal-profile-page">Animal 2</a></li>
-            <li><a href="#animal-profile-page">Animal 3</a></li>
-            <li><a href="#animal-profile-page">Animal 4</a></li>
-            <li><a href="#animal-profile-page">Animal 5</a></li>
-            <li><a href="#animal-profile-page">Animal 6</a></li>
-            <li><a href="#animal-profile-page">Animal 7</a></li>
-            <li><a href="#animal-profile-page">Animal 8</a></li>
-            <li><a href="#animal-profile-page">Animal 9</a></li>
-            <li><a href="#animal-profile-page">Animal 10</a></li>
+            <li><a href="#animal-profile-page">Cat 1</a></li>
+            <li><a href="#animal-profile-page">Cat 2</a></li>
+            <li><a href="#animal-profile-page">Cat 3</a></li>
+            <li><a href="#animal-profile-page">Cat 4</a></li>
+            <li><a href="#animal-profile-page">Cat 5</a></li>
+            <li><a href="#animal-profile-page">Cat 6</a></li>
+            <li><a href="#animal-profile-page">Cat 7</a></li>
+            <li><a href="#animal-profile-page">Cat 8</a></li>
+            <li><a href="#animal-profile-page">Cat 9</a></li>
+            <li><a href="#animal-profile-page">Cat 10</a></li>
          </ul>
       </div>
       <footer data-role="footer">
@@ -80,18 +137,51 @@
             <li><a href="#user-profile-page">Profile</a></li>
          </ul>
       </footer>
+
+      <div class="modal" id="list-add-animal-modal">
+         <div class="modal-back" data-deactivate="#list-add-animal-modal"></div>
+         <div class="modal-popup">
+            <div class="modal-head">Add Animal</div>
+            <form class="modal-body overscroll" data-ajax="false">
+               <div class="form-control">
+                  <label for="#list-add-animal-name" class="form-label">name</label>
+                  <input type="text" class="form-input" placeholder="Type a Name" data-role="none" id="list-add-animal-name">
+               </div>
+               <div class="form-control">
+                  <label for="#list-add-animal-type" class="form-label">type</label>
+                  <input type="text" class="form-input" placeholder="Type a Type" data-role="none" id="list-add-animal-type">
+               </div>
+               <div class="form-control">
+                  <label for="#list-add-animal-breed" class="form-label">breed</label>
+                  <input type="text" class="form-input" placeholder="Type a Breed" data-role="none" id="list-add-animal-breed">
+               </div>
+               <div class="form-control">
+                  <label for="#list-add-animal-description" class="form-label">description</label>
+                  <input type="text" class="form-input" placeholder="Type a Description" data-role="none" id="list-add-animal-description">
+               </div>
+               <!-- <p>Nostrum quos delectus blanditiis aperiam! Fuga excepturi, quibusdam, asperiores quis culpa vel ipsum, voluptatem quas officiis a rem nesciunt voluptatum accusamus deserunt consequuntur similique delectus dicta, quod odio. Laboriosam incidunt exercitationem ipsa necessitatibus enim neque. Quisquam totam rerum quia, nobis deleniti quae, delectus hic. Consectetur laudantium quis sunt aperiam hic quidem, velit dolores praesentium sapiente. Non, architecto, quas. Eaque, modi.</p>
+               <div class="display-flex">
+                  <div class="flex-stretch"></div>
+                  <div class="flex-none"><button class="form-button">click</button></div>
+               </div> -->
+            </form>
+            <div class="modal-foot" style="text-align:right" data-deactivate="#list-add-animal-modal">
+               Submit
+            </div>
+         </div>
+      </div>
    </section>
 
 
    <section data-role="page" id="animal-profile-page">
       <header data-role="header">
-         <h1>Animal</h1>
+         <h1>Cat</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
          </ul>
       </header>
       <div data-role="main">
-         Animal profile
+         Cat profile
          <a href="#animal-edit-page">Edit</a>
       </div>
    </section>
