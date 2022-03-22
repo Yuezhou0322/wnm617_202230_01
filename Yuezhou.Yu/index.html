@@ -117,28 +117,106 @@
             <li><a href="#" data-activate="#list-add-animal-modal">Add</a></li>
          </ul>
       </header>
-      <div data-role="main">
+        <div data-role="main">
          <!-- ul>li*10>a[href=#animal-profile-page]>{Animal $} -->
-         <ul>
-            <li><a href="#animal-profile-page">Cat 1</a></li>
-            <li><a href="#animal-profile-page">Cat 2</a></li>
-            <li><a href="#animal-profile-page">Cat 3</a></li>
-            <li><a href="#animal-profile-page">Cat 4</a></li>
-            <li><a href="#animal-profile-page">Cat 5</a></li>
-            <li><a href="#animal-profile-page">Cat 6</a></li>
-            <li><a href="#animal-profile-page">Cat 7</a></li>
-            <li><a href="#animal-profile-page">Cat 8</a></li>
-            <li><a href="#animal-profile-page">Cat 9</a></li>
-            <li><a href="#animal-profile-page">Cat 10</a></li>
+         <ul class="animal-list">
+            <!-- li.animal-list-item*10>a[href=#animal-profile-page]>(div.animal-list-image>img[src='https://via.placeholder.com/400x400/?text=Animal$'])+div.animal-list-body>(div.animal-list-name>{Animal $})+(div.animal-list-type>{Type})+(div.animal-list-breed>{Breed}) -->
+            <li class="animal-list-item">
+               <a href="#animal-profile-page">
+                  <div class="animal-list-image"><img src="https://via.placeholder.com/400x400/?text=Animal1" alt=""></div>
+                  <div class="animal-list-body">
+                     <div class="animal-list-name">Animal 1</div>
+                     <div class="animal-list-type">Type</div>
+                     <div class="animal-list-breed">Breed</div>
+                  </div>
+               </a>
+            </li>
+            <li class="animal-list-item">
+               <a href="#animal-profile-page">
+                  <div class="animal-list-image"><img src="https://via.placeholder.com/400x400/?text=Animal2" alt=""></div>
+                  <div class="animal-list-body">
+                     <div class="animal-list-name">Animal 2</div>
+                     <div class="animal-list-type">Type</div>
+                     <div class="animal-list-breed">Breed</div>
+                  </div>
+               </a>
+            </li>
+            <li class="animal-list-item">
+               <a href="#animal-profile-page">
+                  <div class="animal-list-image"><img src="https://via.placeholder.com/400x400/?text=Animal3" alt=""></div>
+                  <div class="animal-list-body">
+                     <div class="animal-list-name">Animal 3</div>
+                     <div class="animal-list-type">Type</div>
+                     <div class="animal-list-breed">Breed</div>
+                  </div>
+               </a>
+            </li>
+            <li class="animal-list-item">
+               <a href="#animal-profile-page">
+                  <div class="animal-list-image"><img src="https://via.placeholder.com/400x400/?text=Animal4" alt=""></div>
+                  <div class="animal-list-body">
+                     <div class="animal-list-name">Animal 4</div>
+                     <div class="animal-list-type">Type</div>
+                     <div class="animal-list-breed">Breed</div>
+                  </div>
+               </a>
+            </li>
+            <li class="animal-list-item">
+               <a href="#animal-profile-page">
+                  <div class="animal-list-image"><img src="https://via.placeholder.com/400x400/?text=Animal5" alt=""></div>
+                  <div class="animal-list-body">
+                     <div class="animal-list-name">Animal 5</div>
+                     <div class="animal-list-type">Type</div>
+                     <div class="animal-list-breed">Breed</div>
+                  </div>
+               </a>
+            </li>
+            <li class="animal-list-item">
+               <a href="#animal-profile-page">
+                  <div class="animal-list-image"><img src="https://via.placeholder.com/400x400/?text=Animal6" alt=""></div>
+                  <div class="animal-list-body">
+                     <div class="animal-list-name">Animal 6</div>
+                     <div class="animal-list-type">Type</div>
+                     <div class="animal-list-breed">Breed</div>
+                  </div>
+               </a>
+            </li>
+            <li class="animal-list-item">
+               <a href="#animal-profile-page">
+                  <div class="animal-list-image"><img src="https://via.placeholder.com/400x400/?text=Animal7" alt=""></div>
+                  <div class="animal-list-body">
+                     <div class="animal-list-name">Animal 7</div>
+                     <div class="animal-list-type">Type</div>
+                     <div class="animal-list-breed">Breed</div>
+                  </div>
+               </a>
+            </li>
+            <li class="animal-list-item">
+               <a href="#animal-profile-page">
+                  <div class="animal-list-image"><img src="https://via.placeholder.com/400x400/?text=Animal8" alt=""></div>
+                  <div class="animal-list-body">
+                     <div class="animal-list-name">Animal 8</div>
+                     <div class="animal-list-type">Type</div>
+                     <div class="animal-list-breed">Breed</div>
+                  </div>
+               </a>
+            </li>
+            <li class="animal-list-item">
+               <a href="#animal-profile-page">
+                  <div class="animal-list-image"><img src="https://via.placeholder.com/400x400/?text=Animal9" alt=""></div>
+                  <div class="animal-list-body">
+                     <div class="animal-list-name">Animal 9</div>
+                     <div class="animal-list-type">Type</div>
+                     <div class="animal-list-breed">Breed</div>
+                  </div>
+               </a>
+            </li>
+            
          </ul>
+
+         <div class="floater bottom right circle-button" data-activate="#list-add-animal-modal">&plus;</div>
       </div>
-      <footer data-role="footer">
-         <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
-         </ul>
-      </footer>
+      <footer data-role="footer" data-template="#footer-template"></footer>
 
       <div class="modal" id="list-add-animal-modal">
          <div class="modal-back" data-deactivate="#list-add-animal-modal"></div>
@@ -189,18 +267,28 @@
    </section>
 
 
-   <section data-role="page" id="user-profile-page">
+      <section data-role="page" id="user-profile-page">
       <div data-role="main">
-         user profile
-         <a href="#user-edit-page">Edit</a>
-      </div>
-      <footer data-role="footer">
-         <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
-         </ul>
-      </footer>
+         <div class="profile"></div>
+        
+         <div>
+            <i class="icon-swap map-icon"></i>
+            <div class="sploofactive">
+               <i class="icon-swap map-icon"></i>
+            </div>
+         </div>
+
+         <div style="margin-top: 100px;font-weight:bold;text-align: center;
+              border-top:3px double #f78e21; padding-top: 40px; padding-left: 50px;padding-right: 50px;font-size: 20px;">
+         
+         Pets are humanizing. They remind us we have an obligation and responsibility to preserve and nurture and care for all life.
+
+
+         <div class="floater top right">
+            <a href="#" class="icon" data-activate="#user-settings-modal"><img src="img/icon/user.png" alt=""></a>
+         </div>
+
+      <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
    <section data-role="page" id="user-edit-page">
@@ -215,15 +303,24 @@
       <div data-role="main">
         Form
       </div>
-      <footer data-role="footer">
-         <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
-         </ul>
-      </footer>
    </section>
 
+   <script type="text/template" id="footer-template">
+      <ul class="nav-icon-set">
+         <li><a href="#recent-page" data-activateone=".nav-icon-set li:nth-child(1)">
+            <span class="nav-icon"><img class="icon" src="img/icons/house.png"></span>
+            <span class="nav-icon-label">Recent</span>
+         </a></li>
+         <li><a href="#list-page" data-activateone=".nav-icon-set li:nth-child(2)">
+            <span class="nav-icon"><img class="icon" src="img/icons/clipboard.png"></span>
+            <span class="nav-icon-label">List</span>
+         </a></li>
+         <li><a href="#user-profile-page" data-activateone=".nav-icon-set li:nth-child(3)">
+            <span class="nav-icon"><img class="icon" src="img/icons/user.png"></span>
+            <span class="nav-icon-label">Profile</span>
+         </a></li>
+      </ul>
+   </script>
 
 </body>
 </html>
