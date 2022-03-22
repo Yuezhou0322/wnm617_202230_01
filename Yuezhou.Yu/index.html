@@ -78,17 +78,19 @@
 
    <section data-role="page" id="recent-page">
       <div data-role="main" class="map-placeholder">
+      	         <div class="recent-search">
+            <form class="hotdog flex-stretch" data-ajax="false" id="recent-search">
+               <input type="search" data-role="none" placeholder="Search">
+            </form>
+            <div class="flex-none" style="line-height:3rem;padding:0 0.5em">
+               <img src="img/icons/edit.png" style="vertical-align: middle;" alt="" class="icon">
+            </div>
+         </div>
          <div class="marker" style="position:absolute;top:30vh;left:20vw" data-activate="#map-drawer">
             <img src="img/icons/marker.svg" alt="" class="icon">
          </div>
       </div>
-      <footer data-role="footer">
-         <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
-         </ul>
-      </footer>
+      <footer data-role="footer" data-template="#footer-template"></footer>
 
       <div class="modal" id="map-drawer">
          <div class="modal-back transparent passthrough" data-deactivate="#map-drawer"></div>
@@ -163,21 +165,21 @@
             </li>
             <li class="animal-list-item">
                <a href="#animal-profile-page">
-                  <div class="animal-list-image"><img src="img/icons/cat1.jpg" alt=""></div>
+                  <div class="animal-list-image"><img src="img/icons/cat5.jpg" alt=""></div>
                   <div class="animal-list-body">
-                     <div class="animal-list-name">Animal 5</div>
-                     <div class="animal-list-type">Type</div>
-                     <div class="animal-list-breed">Breed</div>
+                     <div class="animal-list-name">Setta</div>
+                     <div class="animal-list-type">Type: small</div>
+                     <div class="animal-list-breed">Breed: Sphynx</div>
                   </div>
                </a>
             </li>
             <li class="animal-list-item">
                <a href="#animal-profile-page">
-                  <div class="animal-list-image"><img src="img/icons/cat2.jpg" alt=""></div>
+                  <div class="animal-list-image"><img src="img/icons/cat6.jpg" alt=""></div>
                   <div class="animal-list-body">
-                     <div class="animal-list-name">Animal 6</div>
-                     <div class="animal-list-type">Type</div>
-                     <div class="animal-list-breed">Breed</div>
+                     <div class="animal-list-name">Cici</div>
+                     <div class="animal-list-type">Type: medium-large</div>
+                     <div class="animal-list-breed">Breed: Maine coon</div>
                   </div>
                </a>
             </li>
@@ -267,27 +269,27 @@
    </section>
 
 
-      <section data-role="page" id="user-profile-page">
+   <section data-role="page" id="user-profile-page">
       <div data-role="main">
-         <div class="profile"></div>
-        
-         <div>
-            <i class="icon-swap map-icon"></i>
-            <div class="sploofactive">
-               <i class="icon-swap map-icon"></i>
+        <div class="profile">
+        	<div class="user-profile-image">
+               <img src="img/self.jpg" alt="">
             </div>
-         </div>
+        </div>
 
-         <div style="margin-top: 100px;font-weight:bold;text-align: center;
-              border-top:3px double #f78e21; padding-top: 40px; padding-left: 50px;padding-right: 50px;font-size: 20px;">
-         
-         Pets are humanizing. They remind us we have an obligation and responsibility to preserve and nurture and care for all life.
-
-
-         <div class="floater top right">
-            <a href="#" class="icon" data-activate="#user-settings-modal"><img src="img/icons/user.png" alt=""></a>
-         </div>
-
+<div class="user-profile-description">
+   <div class="user-profile-name">Name: Emily</div>
+   <div class="user-profile-age">Age: 26</div>
+   <div class="user-profile-cat">Total cat: 4</div>
+</div>
+         <br>
+         <br>
+<div style="text-align: center;">
+         <a href="#user-edit-page">Edit</a></div>
+         <br>
+<div style="text-align: center;">
+         <a href="#" class="js-logout">Logout</a></div>
+      </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
