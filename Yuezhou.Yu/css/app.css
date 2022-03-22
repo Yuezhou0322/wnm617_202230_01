@@ -420,6 +420,7 @@ a:hover {
 .nav-icon .icon {
     vertical-align: middle;
     width: 1.5em;
+    height:1.5em;
 }
 .nav-icon-label {
     line-height: 1rem;
