@@ -86,6 +86,12 @@
                <img src="img/icons/edit.png" style="vertical-align: middle;" alt="" class="icon">
             </div>
          </div>
+
+         <div class="floater bottom right" style="padding:1em">
+            <a href="#choose-animal-page" class="circle-button js-add-from-recent">&plus;</a>
+         </div>
+
+
          <div class="marker" style="position:absolute;top:30vh;left:20vw" data-activate="#map-drawer">
             <img src="img/icons/marker.svg" alt="" class="icon">
          </div>
@@ -307,7 +313,70 @@
          </ul>
       </header>
       <div data-role="main">
-        Form
+        <div data-role="main" class="display-flex flex-vertical">
+         <div class="overscroll">
+            <form id="user-edit-form" data-ajax="false" style="padding:1em">
+            	<div class="form-control">
+      <label for="user-edit-name" class="form-label">name</label>
+      <input class="form-input" type="text" id="user-edit-name" data-role="none" placeholder="Type Your Name" value="">
+   </div>
+   <div class="form-control">
+      <label for="user-edit-name" class="form-label">username</label>
+      <input class="form-input" type="text" id="user-edit-name" data-role="none" placeholder="Type Your Name" value="">
+   </div>
+   <div class="form-control">
+      <label for="user-edit-name" class="form-label">email</label>
+      <input class="form-input" type="text" id="user-edit-name" data-role="none" placeholder="Type Your Name" value="">
+   </div>
+            </form>
+         </div>
+      </div>
+      </div>
+   </section>
+
+
+
+   <section data-role="page" id="choose-animal-page">
+      <header data-role="header">
+         <h1>Choose Animal</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Cancel</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#choose-location-page">Next</a></li>
+         </ul>
+      </header>
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="overscroll">
+            <form style="padding:1em">
+               <div>
+                  <a href="#animal-add-page" class="form-button">Create New Animal</a>
+               </div>
+               <p style="text-align:center">Or Choose One Below</p>
+               <div class="animal-choices">
+                  <div class='form-select'>
+                     <select id="location-choose-animal" data-role="none">
+                     	<option value="51">Scottish fold</option>
+                     	<option value="51">American shorthair</option><option value="51">Persian</option>
+                     </select>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </section>
+
+   <section data-role="page" id="choose-location-page">
+      <header data-role="header">
+         <h1>Choose Location</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#recent-page">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main" class="display-flex flex-vertical">
+        <div data-role="main" class="map-placeholder">
+        </div>
       </div>
    </section>
 

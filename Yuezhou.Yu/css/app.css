@@ -467,3 +467,34 @@ a:hover {
   margin-top: 20px;
   text-align: center;
 }
+
+/* form */
+
+.form-select {
+   position: relative;
+   color: F5F5F5;
+}
+.form-select>select {
+   display:inline-block;
+   width:100%;
+   border-width:0;
+   background-color:var(--color-neutral-light);
+   padding:0.5em 2em 0.5em 1em;
+   border-radius:0.3em;
+   font:inherit;
+   outline:0;
+   position:relative;
+   overflow:hidden;
+   -webkit-appearance:none;
+}
+.form-select::after {
+   position:absolute;
+   top:50%;
+   right:0.5em;
+   content:'▼';
+   font-family:arial;
+   font-size:0.9em;
+   color:var(--color-neutral-dark);
+   pointer-events:none;
+   transform: translateY(-50%);
+}
