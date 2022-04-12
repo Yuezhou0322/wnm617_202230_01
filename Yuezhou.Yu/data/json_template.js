@@ -15,8 +15,6 @@
       return this.username + '@gmail.com';
     },
     password: 'md5(pass)',
-    gender: '{{gender()}}',
-    phone: '+1 {{phone()}}',
     img: function(tags) {
       return 'https://via.placeholder.com/400/' +
         tags.integer(700,999) + '/fff/?text=' + this.username;
