@@ -138,96 +138,7 @@
          <!-- ul>li*10>a[href=#animal-profile-page]>{Animal $} -->
          <ul class="animal-list">
             <!-- li.animal-list-item*10>a[href=#animal-profile-page]>(div.animal-list-image>img[src='https://via.placeholder.com/400x400/?text=Animal$'])+div.animal-list-body>(div.animal-list-name>{Animal $})+(div.animal-list-type>{Type})+(div.animal-list-breed>{Breed}) -->
-            <li class="animal-list-item">
-               <a href="#animal-profile-page">
-                  <div class="animal-list-image"><img src="img/icons/cat1.jpg" alt=""></div>
-                  <div class="animal-list-body">
-                     <div class="animal-list-name">Coco</div>
-                     <div class="animal-list-type">Type: medium-large size</div>
-                     <div class="animal-list-breed">Breed: American Shorthair </div>
-                  </div>
-               </a>
-            </li>
-            <li class="animal-list-item">
-               <a href="#animal-profile-page">
-                  <div class="animal-list-image"><img src="img/icons/cat2.jpg" alt=""></div>
-                  <div class="animal-list-body">
-                     <div class="animal-list-name">Lucy</div>
-                     <div class="animal-list-type">Type: short</div>
-                     <div class="animal-list-breed">Breed: Siameze</div>
-                  </div>
-               </a>
-            </li>
-            <li class="animal-list-item">
-               <a href="#animal-profile-page">
-                  <div class="animal-list-image"><img src="img/icons/cat3.jpg" alt=""></div>
-                  <div class="animal-list-body">
-                     <div class="animal-list-name">Anna</div>
-                     <div class="animal-list-type">Type: medium</div>
-                     <div class="animal-list-breed">Breed: Persian</div>
-                  </div>
-               </a>
-            </li>
-            <li class="animal-list-item">
-               <a href="#animal-profile-page">
-                  <div class="animal-list-image"><img src="img/icons/cat4.jpg" alt=""></div>
-                  <div class="animal-list-body">
-                     <div class="animal-list-name">Kate</div>
-                     <div class="animal-list-type">Type: medium</div>
-                     <div class="animal-list-breed">Breed: Scottish fold</div>
-                  </div>
-               </a>
-            </li>
-            <li class="animal-list-item">
-               <a href="#animal-profile-page">
-                  <div class="animal-list-image"><img src="img/icons/cat5.jpg" alt=""></div>
-                  <div class="animal-list-body">
-                     <div class="animal-list-name">Setta</div>
-                     <div class="animal-list-type">Type: small</div>
-                     <div class="animal-list-breed">Breed: Sphynx</div>
-                  </div>
-               </a>
-            </li>
-            <li class="animal-list-item">
-               <a href="#animal-profile-page">
-                  <div class="animal-list-image"><img src="img/icons/cat6.jpg" alt=""></div>
-                  <div class="animal-list-body">
-                     <div class="animal-list-name">Cici</div>
-                     <div class="animal-list-type">Type: medium-large</div>
-                     <div class="animal-list-breed">Breed: Maine coon</div>
-                  </div>
-               </a>
-            </li>
-            <li class="animal-list-item">
-               <a href="#animal-profile-page">
-                  <div class="animal-list-image"><img src="img/icons/cat3.jpg" alt=""></div>
-                  <div class="animal-list-body">
-                     <div class="animal-list-name">Animal 7</div>
-                     <div class="animal-list-type">Type</div>
-                     <div class="animal-list-breed">Breed</div>
-                  </div>
-               </a>
-            </li>
-            <li class="animal-list-item">
-               <a href="#animal-profile-page">
-                  <div class="animal-list-image"><img src="img/icons/cat4.jpg" alt=""></div>
-                  <div class="animal-list-body">
-                     <div class="animal-list-name">Animal 8</div>
-                     <div class="animal-list-type">Type</div>
-                     <div class="animal-list-breed">Breed</div>
-                  </div>
-               </a>
-            </li>
-            <li class="animal-list-item">
-               <a href="#animal-profile-page">
-                  <div class="animal-list-image"><img src="img/icons/cat1.jpg" alt=""></div>
-                  <div class="animal-list-body">
-                     <div class="animal-list-name">Animal 9</div>
-                     <div class="animal-list-type">Type</div>
-                     <div class="animal-list-breed">Breed</div>
-                  </div>
-               </a>
-            </li>
+
             
          </ul>
 
@@ -275,24 +186,33 @@
          <h1>Cat</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
+             <li class="flex-stretch"></li>
+            <li><a href="#user-edit-page">Edit</a></li>
          </ul>
       </header>
       <div data-role="main">
-         Cat profile
-         <a href="#animal-edit-page">Edit</a>
+         <div class="animal-profile-top">
+         </div>
+         <div class="animal-profile-nav">
+            <div class="active">Map</div>
+            <div>Description</div>
+         </div>
+         <div class="animal-profile-bottom">
+            <div class="animal-profile-map active">
+               <div class="map map-placeholder"></div>
+            </div>
+            <div class="animal-profile-description"></div>
+         </div>
       </div>
    </section>
 
 
    <section data-role="page" id="user-profile-page">
       <div data-role="main">
-        <div class="profile">
-        	<div class="user-profile-image">
-               <img src="img/self.jpg" alt="">
-            </div>
-        </div>
-
-<div class="user-profile-description">
+      	<ul class="user-profile-page"> </ul>
+      </div>
+            
+<!--<div class="user-profile-description">
    <div class="user-profile-name">Name: Emily</div>
    <div class="user-profile-age">Age: 26</div>
    <div class="user-profile-cat">Total cat: 4</div>
@@ -301,8 +221,8 @@
          <br>
 <div style="text-align: center;">
          <a href="#user-edit-page">Edit</a></div>
-         <br>
-<div style="text-align: center;">
+         <br> -->
+<div style="text-align: center; margin-bottom: 20%;">
          <a href="#" class="js-logout">Logout</a></div>
       </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
