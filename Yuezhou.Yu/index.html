@@ -17,8 +17,14 @@
    <script src="js/functions.js"></script>
    <script src="js/pages.js"></script>
    <script src="js/parts.js"></script>
+   <script src="js/maps.js"></script>
 
    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+
+   <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB52y385Eq4IKWQkQ4KC8ejozw-ZRO70KY"
+      defer
+    ></script>
 </head>
 <body>
 	
@@ -82,8 +88,9 @@
 
 
    <section data-role="page" id="recent-page">
-      <div data-role="main" class="map-placeholder">
-      	         <div class="recent-search">
+      <div data-role="main">
+      	<div class="map"></div>
+      	    <div class="recent-search">
             <form class="hotdog flex-stretch" data-ajax="false" id="recent-search">
                <input type="search" data-role="none" placeholder="Search">
             </form>
@@ -94,11 +101,6 @@
 
          <div class="floater bottom right" style="padding:1em">
             <a href="#choose-animal-page" class="circle-button js-add-from-recent">&plus;</a>
-         </div>
-
-
-         <div class="marker" style="position:absolute;top:30vh;left:20vw" data-activate="#map-drawer">
-            <img src="img/icons/marker.svg" alt="" class="icon">
          </div>
       </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
@@ -209,7 +211,7 @@
 
    <section data-role="page" id="user-profile-page">
       <div data-role="main">
-      	<ul class="user-profile-page"> </ul>
+      	<ul class="user-profile-page "> </ul>
       </div>
             
 <!--<div class="user-profile-description">

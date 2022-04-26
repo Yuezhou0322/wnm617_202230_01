@@ -15,9 +15,9 @@ const makeAnimalList = templater(o=>`
 
 
 const makeUserProfilePage = o => `
-<img src="${o.img}">
-<h2>${o.name}</h2>
-<div>
+<img src="${o.img}" class="user-profile-image">
+<h1>${o.name}</h1>
+<div class="info">
    <div><strong>Username</strong> @${o.username}</div>
    <div><strong>Email</strong> ${o.email}</div>
    <a href="#user-edit-page">Edit</a>
