@@ -44,6 +44,11 @@ const RecentPage = async() => {
             .html(makeAnimalPopupBody({...animal, id:animal.animal_id}))
       })
    })
+
+   $(".modal-body").blur(function() {
+      console.log("OK")
+      $("map-drawer").removeClass("active")
+   })
 }
 
 

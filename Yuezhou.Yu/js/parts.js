@@ -42,7 +42,7 @@ const makeAnimalPopupBody = o => `
 </div>
 `;
 
-onst FormControlInput = ({namespace,name,displayname,placeholder,value=""}) => {
+const FormControlInput = ({namespace,name,displayname,placeholder,value=""}) => {
    return `<div class="form-control">
       <label class="form-label" for="#${namespace}-${name}">${displayname}</label>
       <input data-role="none" class="form-input" placeholder="${placeholder}" id="${namespace}-${name}" value="${value}">
@@ -112,3 +112,4 @@ ${FormControlInput({
 })}
 `;
 }
+
