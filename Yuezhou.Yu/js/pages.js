@@ -57,8 +57,11 @@ const ListPage = async() => {
    
    console.log(animals)
 
-   $("#list-page .animal-list").html(makeAnimalList(animals));
+   makeAnimalListSet(animals);
 }
+
+
+
 
 
 

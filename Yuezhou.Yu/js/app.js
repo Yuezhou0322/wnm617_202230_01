@@ -37,6 +37,11 @@ $(() => {
       e.preventDefault();
       submitUserSignup();
    })
+   .on("submit", "#list-search-form", function(e) {
+      e.preventDefault();
+      let s = $(this).find("input").val();
+      checkSearchForm(s);
+   })
 
 
 
@@ -61,7 +66,7 @@ $(() => {
 
 
 
-   .on("change",".imagepicker input", function(e){
+ .on("change",".imagepicker input", function(e){
       checkUpload(this.files[0])
       .then(d=>{
          console.log(d)
