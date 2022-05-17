@@ -1,19 +1,19 @@
 
 
 
+
 const submitAnimalAdd = async () => {
    let name = $("#animal-add-name").val();
-   let type = $("#animal-add-type").val();
    let breed = $("#animal-add-breed").val();
    let description = $("#animal-add-description").val();
 
 
-   console.log({name,type,breed,description});
+   console.log({name,breed,description});
 
-   if(name!="" && type!="" && breed!="" && description!="") {
+   if(name!="" && breed!="" && description!="") {
       let {id,error} = await query({
          type: 'insert_animal',
-         params: [sessionStorage.userId,name,type,breed,description]
+         params: [sessionStorage.userId,name,breed,description]
       });
 
       if(error) throw(error);
@@ -27,13 +27,12 @@ const submitAnimalAdd = async () => {
 
 const submitAnimalEdit = async () => {
    let name = $("#animal-edit-name").val();
-   let type = $("#animal-edit-type").val();
    let breed = $("#animal-edit-breed").val();
    let description = $("#animal-edit-description").val();
 
    let {result,error} = await query({
       type: 'update_animal',
-      params: [name,type,breed,description,sessionStorage.animalId]
+      params: [name,breed,description,sessionStorage.animalId]
    });
 
    if(error) throw(error);
