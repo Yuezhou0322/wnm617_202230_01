@@ -17,13 +17,15 @@ const makeAnimalList = templater(o=>`
 const makeUserProfilePage = o => `
 <div class="user-profile-head">
    <img src="${o.img}">
-   <a href="#user-edit-photo-page" class="floater left bottom"><img src="img/icons/pen.png" class="icon"></a>
+   <a href="#user-edit-photo-page" class="floater right bottom"><img src="img/icons/pen.png" class="icon"></a>
 </div>
 <div class="user-profile-body">
-   <h2>${o.name}</h2>
+   <h5>${o.name}</h5>
    <div class="user-profile-description">
-      <div><strong>Username</strong> @${o.username}</div>
-      <div><strong>Email</strong> ${o.email}</div>
+      <div><strong>Username:</strong> @${o.username}</div>
+      <br>
+      <div><strong>Email:</strong> ${o.email}</div>
+      <br>
       <a href="#user-settings-page">Settings</a>
    </div>
 </div>
@@ -33,7 +35,7 @@ const makeUserProfilePage = o => `
 const makeAnimalProfileDescription = o => `
 <h2>${o.name}</h2>
 
-<div>${o.breed}</div>
+<h2>${o.breed}</h2>
 `;
 
 const makeAnimalPopupBody = o => `
@@ -42,7 +44,7 @@ const makeAnimalPopupBody = o => `
    <div>
       <h2>${o.name}</h2>
    
-      <div>${o.breed}</div>
+      <h2>${o.breed}</h2>
    </div>
 </div>
 `;
@@ -133,8 +135,6 @@ const filterList = (animals,type) => {
 const makeFilterList = (animals) => {
    return `
    <span data-filter="type" data-value="">All</span>
-   |
-   ${filterList(animals,'type')}
    |
    ${filterList(animals,'breed')}
    `;

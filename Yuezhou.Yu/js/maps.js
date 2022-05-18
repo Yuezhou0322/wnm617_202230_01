@@ -17,6 +17,7 @@ const makeMap = async (target, center={ lat: 37.777528, lng: -122.438593 }) =>{
 }
 
 
+
 const makeMarkers = (map_el, map_locs=[]) => {
    let {map,markers} = map_el.data();
 
