@@ -380,7 +380,7 @@ a:hover {
 /* floater */
 .floater { position: absolute; }
 .floater.top { top:1rem }
-.floater.right { right:1rem }
+.floater.right { right:0.5rem }
 .floater.bottom { bottom:1rem }
 .floater.left { left:1rem }
 
@@ -425,10 +425,13 @@ a:hover {
 
 .user-profile-head {
    position: relative;
+   display: flex;
+   justify-content: center;
+   padding-top: 4rem;
 }
 .user-profile-head>img {
-  width: 100%;
-   height: 50%;
+  width: 15rem;
+   height: 15rem;
    object-fit: cover;
    object-position: center;
    border-radius: 50%;
@@ -467,6 +470,11 @@ a:hover {
    width: 100%;
    position: relative;
    overflow: auto;
+   display: flex;
+   flex-wrap: wrap;
+}
+.animal-list-item {
+   width: 50%;
 }
 .animal-list-item a {
    display: flex;
@@ -475,12 +483,17 @@ a:hover {
    border-radius: 0.5em;
    overflow: hidden;
    box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
 }
 .animal-list-item a:hover {
    text-decoration: none;
 }
 .animal-list-image img {
    width: 6em;
+   height: 6rem;
    vertical-align: text-bottom;
 }
 .animal-list-body {
@@ -488,6 +501,7 @@ a:hover {
 }
 .animal-list-name {
    font-size: 1.3em;
+   text-align: center;
 }
 
 #animal-profile-page [data-role="main"] {
@@ -602,10 +616,45 @@ a:hover {
 .Logout{
    text-align: center;
    padding-bottom: 2em;
+   display: flex;
+   justify-content: center;
 }
 
 #list-page [data-role="main"] {
    display: flex;
    flex-direction: column;
 
+}
+.user-profile-item{
+   display: flex;
+   margin-bottom: 3rem;
+   align-items: center;
+}
+.user-profile-item img{
+   width: 2rem;
+   height: 2rem;
+   margin-right: 1rem;
+}
+.user-profile-item div{
+      display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #a7a7a7;
+    flex: 1;
+    text-align: left;
+    padding-bottom: 0.5rem;
+}
+.user-profile-item div span:nth-child(1){
+     margin-bottom: .2rem;
+     font-size: .2rem;
+}
+.user-profile-item div span:nth-child(2){
+   font-weight: bold;
+}
+.setting{
+   display: block;
+}
+.setting img{
+   width: 2rem;
+   height: 2rem;
+   margin-left: 2rem;
 }

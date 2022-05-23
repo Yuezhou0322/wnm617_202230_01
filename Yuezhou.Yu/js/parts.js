@@ -22,11 +22,27 @@ const makeUserProfilePage = o => `
 <div class="user-profile-body">
    <h5>${o.name}</h5>
    <div class="user-profile-description">
-      <div><strong>Username:</strong> @${o.username}</div>
-      <br>
-      <div><strong>Email:</strong> ${o.email}</div>
-      <br>
-      <a href="#user-settings-page">Settings</a>
+      <div class="user-profile-item">
+         <img src="img/icons/profile.png"/>
+         <div>
+             <span>
+               Username:
+            </span>
+             <span>
+               @${o.username}
+            </span>
+         </div>
+      </div>
+      <div class="user-profile-item">
+         <img src="img/icons/email.png"/>
+         <div>
+            <span>
+               Email:
+            </span>
+            <span>${o.email}</span>
+         </div>
+      </div>
+
    </div>
 </div>
 `;

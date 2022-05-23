@@ -1,7 +1,6 @@
 
 $(() => {
-   checkUserId();
-
+   checkUserId()
    // EVENT DELEGATION
    $(document)
 
