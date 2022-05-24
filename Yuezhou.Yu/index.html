@@ -32,9 +32,9 @@
 	<section data-role="page" id="signin-page">
       <div data-role="main" class="display-flex flex-vertical">
          <div class="flex-stretch"></div>
-            <div style="text-align: center; font-weight: bold;">
+            <!-- <div style="text-align: center; font-weight: bold;margin-top: 1rem">
                Welcome to Cat Paw Tracker ~
-            </div>
+            </div> -->
          </div>
 
          <form id="signin-form" class="form" data-ajax="false">
@@ -112,7 +112,7 @@
       <div class="modal" id="map-drawer">
          <div class="modal-back transparent " data-deactivate="#map-drawer"></div>
          <div class="modal-drawer top">
-            <div class="modal-body"></div>
+            <div class="modal-body col-flex" ></div>
          </div>
       </div>
    </section>
@@ -165,11 +165,11 @@
              <a href="#animal-edit-photo-page" class="floater bottom left"><img src="img/icons/pen.png" class="icon"></a>
          </div>
          <div class="animal-profile-nav">
-            <div class="active">Map</div>
+            <div class="actives">Map</div>
             <div>Description</div>
          </div>
          <div class="animal-profile-bottom">
-            <div class="animal-profile-map active">
+            <div class="animal-profile-map actives">
                <div class="map map-placeholder"></div>
                <a href="#choose-location-page" class="floater bottom right circle-button js-location-choose-animal">&plus;</a>
             </div>
@@ -295,21 +295,28 @@
          <img src="img/icons/setting.png">
       </a>
       </div>
+      <div class="maskWrapper">
+      	
+      </div>
+      <div class="mask">
+      	<h1>User Settings</h1>
+      	<ul>
+            <li><a href="#user-edit-page">Edit User</a></li>
+            <li><a href="#user-password-page">Edit Password</a></li>
+         </ul>
+      </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
    <section data-role="page" id="user-settings-page">
       <header data-role="header">
-         <h1>User Settings</h1>
+         
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
          </ul>
       </header>
       <div data-role="main">
-         <ul>
-            <li><a href="#user-edit-page">Edit User</a></li>
-            <li><a href="#user-password-page">Edit Password</a></li>
-         </ul>
+         
       </div>
    </section>
 

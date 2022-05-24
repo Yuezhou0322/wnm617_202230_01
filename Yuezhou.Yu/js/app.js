@@ -6,7 +6,8 @@ $(() => {
 
    .on("pagecontainerbeforeshow", function(event, ui){
       console.log(ui.toPage[0].id)
-
+      $('.mask').attr('style','display:none')
+      $('.maskWrapper').attr('style','display:none')
       // PAGE ROUTING
       switch(ui.toPage[0].id) {
          case "recent-page": RecentPage(); break;
@@ -111,7 +112,17 @@ $(() => {
       sessionStorage.removeItem("userId");
       checkUserId();
    })
-
+   .on("click", ".maskWrapper", function(e) {
+      e.preventDefault()
+      console.log(11111)
+      $('.mask').attr('style','display:none')
+      $('.maskWrapper').attr('style','display:none')
+   })
+   .on("click", ".setting", function(e) {
+      e.preventDefault()
+      $('.mask').attr('style','display:block')
+      $('.maskWrapper').attr('style','display:block')
+   })
 
    .on("click", ".js-animal-jump", function(e) {
       try {
@@ -134,10 +145,10 @@ $(() => {
       let id = $(this).index();
       $(this).parent()
          .next().children().eq(id)
-         .addClass("active")
-         .siblings().removeClass("active")
-      $(this).addClass("active")
-         .siblings().removeClass("active")
+         .addClass("actives")
+         .siblings().removeClass("actives")
+      $(this).addClass("actives")
+         .siblings().removeClass("actives")
    })
 
 

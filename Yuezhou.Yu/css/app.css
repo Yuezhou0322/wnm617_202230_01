@@ -363,8 +363,12 @@ a:hover {
 
 .modal-drawer.top,
 .modal-drawer.bottom {
-   height: 40vh;
+   height: 22vh;
    width: 100%;
+}
+.modal-body{
+   border-bottom-left-radius: 1rem;
+   border-bottom-right-radius: 1rem;
 }
 .modal-drawer.top { top:0; transform:translateY(-100%); }
 .modal-drawer.bottom { bottom:0; transform:translateY(100%); }
@@ -549,6 +553,10 @@ a:hover {
    opacity: 1;
    pointer-events: initial;
 }
+.animal-profile-bottom div.actives {
+   opacity: 1;
+   pointer-events: initial;
+}
 
 
 
@@ -627,7 +635,7 @@ a:hover {
 }
 .user-profile-item{
    display: flex;
-   margin-bottom: 3rem;
+   margin-bottom: 2rem;
    align-items: center;
 }
 .user-profile-item img{
@@ -657,4 +665,31 @@ a:hover {
    width: 2rem;
    height: 2rem;
    margin-left: 2rem;
+}
+.mask{
+   position: fixed;
+   width: 100%;
+   height: 16rem;
+   background-color: #d3d3d3;
+   bottom: 0rem;
+   border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    /*z-index: 10; */
+    display: none;
+}
+.maskWrapper{
+   position: fixed;
+   width: 100%;
+   height: 70%;
+   display: none;
+}
+.col-flex > div{
+   flex-direction: column;
+}
+.animal-list-image{
+   display: flex;
+   justify-content: center;
+}
+.actives{
+  border-bottom: 4px solid #ff9800;
 }
