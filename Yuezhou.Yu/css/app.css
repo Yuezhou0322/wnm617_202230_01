@@ -639,6 +639,7 @@ a:hover {
    position:relative;
    overflow:hidden;
    -webkit-appearance:none;
+   ouline: 0;
 }
 .form-select::after {
    position:absolute;
