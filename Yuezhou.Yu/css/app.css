@@ -97,7 +97,7 @@ a:hover {
    width: 100%;
    border-width: 0;
    border-radius: 0.3em;
-   background-color: var(--color-neutral-light);
+   background-color: #809597;
    font: inherit;
    padding: 0.5em 1em;
    margin: 0;
@@ -424,6 +424,45 @@ a:hover {
 
 
 
+.imagepicker input {
+  display:none;
+}
+.imagepicker.thumbnail {
+   cursor:pointer;
+   color:white;
+   background-color:rgba(0,0,0,0.3);
+   position:relative;
+   display:inline-block;
+   width:6em;
+   height:6em;
+   border-radius:0.6em;
+   border:0.25em solid white;
+   vertical-align:middle;
+   box-shadow:0 0.15em 0.35em 0.1em rgba(0,0,0,0.2);
+   margin:0.5em;
+
+   background-position:center;
+   background-size:cover;
+}
+/* This will add the floating plus symbol to the imagepicker */
+.imagepicker.thumbnail:before {
+   content:'+';
+   position:absolute;
+   font-size:3em;
+   vertical-align:middle;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+}
+/* This will hide the plus symbol behind the background of the imagepicker if the class "picked" is added to the element */
+.imagepicker.thumbnail.picked:before {
+   z-index:-1;
+}
+
+
+
+
+
 
 /* User Profile */
 
@@ -498,6 +537,8 @@ a:hover {
 .animal-list-image img {
    width: 6em;
    height: 6rem;
+   object-fit: cover;
+   object-position: center;
    vertical-align: text-bottom;
 }
 .animal-list-body {
@@ -590,7 +631,7 @@ a:hover {
    display:inline-block;
    width:100%;
    border-width:0;
-   background-color:var(--color-neutral-light);
+   background-color:#809597;
    padding:0.5em 2em 0.5em 1em;
    border-radius:0.3em;
    font:inherit;

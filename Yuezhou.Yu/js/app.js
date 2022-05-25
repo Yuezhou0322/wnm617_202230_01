@@ -11,8 +11,7 @@ $(() => {
       // PAGE ROUTING
       switch(ui.toPage[0].id) {
          case "recent-page": RecentPage(); break;
-         case "list-page": ListPage(); break;
-         
+         case "list-page": ListPage(); break;         
          case "user-profile-page": UserProfilePage(); break;
          case "user-edit-page": UserEditPage(); break;
          case "user-edit-photo-page": UserEditPhotoPage(); break;
@@ -20,6 +19,7 @@ $(() => {
          case "animal-edit-page": AnimalEditPage(); break;
          case "animal-add-page": AnimalAddPage(); break;
          case "animal-edit-photo-page": AnimalEditPhotoPage(); break;
+         case "choose-animal-page": ChooseAnimalPage(); break;
          case "choose-location-page": ChooseLocationPage(); break;
       }
    })
@@ -62,6 +62,9 @@ $(() => {
    })
 
 
+.on("change", "#choose-animal-input select", function(e) {
+   $("#location-animal").val(this.value);
+})
 
 
 
@@ -74,7 +77,7 @@ $(() => {
          $(this).parent().prev().val(filename)
          $(this).parent().css({
             "background-image":`url(${filename})`
-         })
+         }).addClass("picked");
       })
    })
    .on("click", ".js-submit-user-upload", function(e) {
@@ -138,6 +141,7 @@ $(() => {
    })
    .on("click",".js-location-choose-animal", function(e) {
       $("#location-animal").val(sessionStorage.animalId)
+      $("#location-start").val(-2);
    })
 
 

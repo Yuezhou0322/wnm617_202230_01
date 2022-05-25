@@ -6,6 +6,7 @@ const submitAnimalAdd = async () => {
    let name = $("#animal-add-name").val();
    let breed = $("#animal-add-breed").val();
    let description = $("#animal-add-description").val();
+   let image = $("#animal-add-image-url").val();
 
 
    console.log({name,breed,description});
@@ -13,9 +14,14 @@ const submitAnimalAdd = async () => {
    if(name!="" && breed!="" && description!="") {
       let {id,error} = await query({
          type: 'insert_animal',
-         params: [sessionStorage.userId,name,breed,description]
+          params: [
+            sessionStorage.userId,
+            name,
+            breed,
+            description,
+            image==='' ? 'https://via.placeholder.com/400/?text=ANIMAL' : image
+         ]
       });
-
       if(error) throw(error);
 
       sessionStorage.animalId = id;

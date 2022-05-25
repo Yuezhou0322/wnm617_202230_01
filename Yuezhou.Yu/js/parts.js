@@ -78,6 +78,27 @@ const FormControlTextarea = ({namespace,name,displayname,placeholder,value=""}) 
    </div>`;
 }
 
+const SelectOptions = templater(o => `
+   <option value="${o.value}" ${o.selected?'selected':''}>${o.text}</option>
+`);
+const FormSelect = (options,namespace,name,value="") => {
+   return `
+   <div class="form-select">
+      <select id="${namespace}-${name}" data-role="none">
+         ${SelectOptions(options.map(o=>({
+            ...o,
+            ...(o.id==value && {selected: true})
+         })))}
+      </select>
+   </div>`;
+}
+const FormControlSelect = (options,namespace,name,displayname,value="") => {
+   return `<div class="form-control">
+      <label class="form-label" for="#${namespace}-${name}">${displayname}</label>
+      ${FormSelect(options,namespace,name,value)}
+   </div>`;
+}
+
 const makeAnimalForm = (animal,namespace = "animal-add") => {
 return `
 ${FormControlInput({

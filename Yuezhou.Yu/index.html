@@ -189,7 +189,13 @@
             <li><a href="#" class="js-submit-animal-add">Save</a></li>
          </ul>
       </header>
-      <div data-role="main">
+         <div data-role="main">
+         <div style="padding:1em">
+            <input type="hidden" id="animal-add-image-url">
+            <label class="imagepicker imagepicker-replace thumbnail" id="animal-add-image-picker">
+               <input type='file' data-role="none">
+            </label>
+         </div>
          <form id="animal-add-form" class="overscroll" data-ajax="false" style="padding:1em"></form>
       </div>
    </section>
@@ -241,8 +247,14 @@
             <li><a href="#choose-location-page">Next</a></li>
          </ul>
       </header>
-      <div data-role="main">
+       <div data-role="main" style="padding:1em">
          <input type="hidden" id="location-animal">
+         <input type="hidden" id="location-start" value="-3">
+         <div class="form-control">
+            <a href="#animal-add-page" class="form-button">Add New Animal</a>
+         </div>
+         <p>or select one below</p>
+         <div class="form-control" id="choose-animal-input"></div>
       </div>
    </section>
 
