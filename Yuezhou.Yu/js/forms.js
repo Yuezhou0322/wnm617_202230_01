@@ -117,7 +117,7 @@ const submitLocationAdd = async () => {
 
    if(error) throw(error);
 
-   history.go(-2);
+   history.go(+$("#location-start").val());
 }
 
 
